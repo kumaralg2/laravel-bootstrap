@@ -52,13 +52,27 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
+        // 'mysql' => [
+        //     'driver' => 'mysql',
+        //     'host' => env('DB_HOST', $_ENV["CLEARDB_DATABASE_HOST"]),
+        //     'port' => env('DB_PORT', '3306'),
+        //     'database' => env('DB_DATABASE', $_ENV["CLEARDB_DATABASE_NAME"]),
+        //     'username' => env('DB_USERNAME', $_ENV["CLEARDB_DATABASE_USER"]),
+        //     'password' => env('DB_PASSWORD', $_ENV["CLEARDB_DATABASE_PASSWORD"]),
+        //     'charset' => 'utf8',
+        //     'collation' => 'utf8_unicode_ci',
+        //     'prefix' => '',
+        //     'strict' => false,
+        //     'engine' => null,
+        // ],
+         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', $_ENV["CLEARDB_DATABASE_HOST"]),
+            'host' => 'localhost',
+            'unix_socket' => "/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock",
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', $_ENV["CLEARDB_DATABASE_NAME"]),
-            'username' => env('DB_USERNAME', $_ENV["CLEARDB_DATABASE_USER"]),
-            'password' => env('DB_PASSWORD', $_ENV["CLEARDB_DATABASE_PASSWORD"]),
+            'database' => 'laravel_starter',
+            'username' => 'root',
+            'password' => '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
@@ -104,17 +118,17 @@ return [
     |
     */
 
-    'redis' => [
+    // 'redis' => [
 
-        'cluster' => false,
+    //     'cluster' => false,
 
-        'default' => [
-            'host' => env('REDIS_HOST', 'localhost'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
-            'database' => 0,
-        ],
+    //     'default' => [
+    //         'host' => env('REDIS_HOST', 'localhost'),
+    //         'password' => env('REDIS_PASSWORD', null),
+    //         'port' => env('REDIS_PORT', 6379),
+    //         'database' => 0,
+    //     ],
 
-    ],
+    // ],
 
 ];

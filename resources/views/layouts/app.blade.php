@@ -64,7 +64,10 @@ min-height: 600px;
    <div class="navbar-collapse collapse" style="height: 1px;">
      <ul class="nav navbar-nav navbar-right">
         <li class="{{ (Request::is('/') ? 'active' : '') }}"><a href="/">Home</a></li>
-       <li class="{{ (Request::is('*about') ? 'active' : '') }}"><a href="/about">About</a></li>
+        <li class="{{ (Request::is('*alljobs') ? 'active' : '') }}"><a href="/alljobs">All Jobs</a></li>
+        <li class="{{ (Request::is('*postjob') ? 'active' : '') }}"><a href="/postjob">Post a Job</a></li>
+        <li class="{{ (Request::is('*howitworks') ? 'active' : '') }}"><a href="/howitworks">How it Works</a></li>
+       {{-- <li class="{{ (Request::is('*about') ? 'active' : '') }}"><a href="/about">About</a></li> --}}
        <li class="{{ (Request::is('*contact') ? 'active' : '') }}"><a href="/contact" >Contact</a></li>
        <!-- Authentication Links -->
        @if (Auth::guest())

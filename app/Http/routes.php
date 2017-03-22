@@ -15,13 +15,21 @@
 Route::get('/', function () {
     return view('home.index');
 });
+Route::get('/alljobs', function () {
+    return view('home.alljobs');
+});
+Route::get('/postjob', function () {
+    return view('home.postjob');
+});
+Route::get('/howitworks', function () {
+    return view('home.howitworks');
+});
 Route::get('/about', function () {
     return view('home.about');
 });
 Route::get('/contact', function () {
     return view('home.contact');
 });
-
 // App pages
 Route::auth();
 
